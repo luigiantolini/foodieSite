@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>🍔 FOODIE CESENA </title>
+  </head>
+
+  <body>
+    <img src="LogoFoodie.jpg" alt="foodie logo" class="center">
+    <hr>
+    <h3>MENU</h3>
+      <a href="MenuFoodie.html">Click here to view the Menu</a>
+    <hr>
+    <h3>ORDER ONLINE</h3>
+      <a href="https://foodie-cesena.ipratico.com/#/">Click here to order online.</a>
+    <hr>
+    <h3>CONTACT ME</h3>
+      <a href="contactme.html">Click here to send me a message.</a>
+    <hr>
+    <h3>SOCIAL</h3>
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/foodiecesena/" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/foodie_cesena/" class="fa fa-instagram"></a>
+    <h3>WHERE</h3>
+    <p>Piazza Amendola, 1, 47521 Cesena FC</p>
+    <style type="text/css">
+     /* Set the size of the div element that contains the map */
+     #map {
+       height: 400px;
+       /* The height is 400 pixels */
+       width: 100%;
+       /* The width is the width of the web page */
+     }
+   </style>
+   <script>
+     // Initialize and add the map
+     function initMap() {
+       // The location of Uluru
+       const uluru = { lat: -25.344, lng: 131.036 };
+       // The map, centered at Uluru
+       const map = new google.maps.Map(document.getElementById("map"), {
+         zoom: 4,
+         center: uluru,
+       });
+       // The marker, positioned at Uluru
+       const marker = new google.maps.Marker({
+         position: uluru,
+         map: map,
+       });
+     }
+   </script>
+ </head>
+ <body>
+   <!--The div element for the map -->
+   <div id="map"></div>
+
+   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+   <script
+     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+     async
+   ></script>
+
+  </body>
+</html>
